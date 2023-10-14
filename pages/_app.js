@@ -1,5 +1,15 @@
-import '@/styles/globals.css'
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+
+  useEffect(() => {
+    // This will log the router instance when the app loads.
+    console.log(router);
+  }, []);
+
+  return <Component {...pageProps} router={router} />;
 }
+
+export default MyApp;

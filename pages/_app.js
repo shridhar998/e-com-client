@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import 'styles/globals.css';
+import { CartProvider } from './CartContext';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -9,7 +11,11 @@ function MyApp({ Component, pageProps }) {
     console.log(router);
   }, []);
 
-  return <Component {...pageProps} router={router} />;
+  return (
+    <CartProvider>
+      <Component {...pageProps} router={router} />
+    </CartProvider>
+  );
 }
 
 export default MyApp;

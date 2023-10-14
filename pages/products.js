@@ -48,7 +48,7 @@ const Products = () => {
     <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <h2 className="text-2xl font-bold tracking-tight text-gray-900">
-          Customers also purchased
+          Fresh Arrivals
         </h2>
 
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
@@ -83,7 +83,7 @@ const Products = () => {
                 </div>
               </div>
             </Link>
-            <button className="p-2 m-2 items-center bg-blue hover:bg-cyan-500" onClick={() => addToCart(product)}>Add to Cart</button>
+            <button className="block w-full rounded bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105 mt-7" onClick={() => addToCart(product)}>Add to Cart</button>
             </div>
           ))}
         </div>

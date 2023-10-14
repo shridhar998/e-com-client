@@ -1,4 +1,6 @@
 import { useRouter } from 'next/router';
+import Footer from './Footer';
+import Products from './products';
 
 
 function HomePage() {
@@ -12,6 +14,8 @@ function HomePage() {
     <div className="bg-white">
       <h1>Welcome to the E-Commerce App</h1>
       <button onClick={navigateToProducts}>View Products</button>
+      <Products/>
+      <Footer/>
     </div>
   );
 }
